@@ -8,16 +8,20 @@ const particlesConfig = {
         }
     },
     "color": {
-        "value": "#fff"
+        "value": "#FFF"
     },
     "shape": {
         "type": "circle",
         "polygon": {
             "sides": 100
-        }
+        },
+        "stroke": {
+            "width": 4,
+            "color": "#2ea0b9"
+          }
     },
     "opacity": {
-        "value": 0.5,
+        "value": 1,
         "random": false,
         "anim": {
             "enable": false,
@@ -30,29 +34,29 @@ const particlesConfig = {
         "value": 6,
         "random": false,
         "anim": {
-            "enable": false,
-            "speed": 40,
-            "size_min": 0.1,
+            "enable": true,
+            "speed": 20,
+            "size_min": 1,
             "sync": false
         }
     },
 
     "line_linked": {
         "enable": true,
-        "distance": 200,
-        "color": "#fff",
+        "distance": 150,
+        "color": "#FFF",
         "opacity": 0.4,
-        "width": 1
+        "width": 2
     },
     "move": {
         "enable": true,
-        "speed": 3,
+        "speed": 1.5,
         "direction": "none",
         "random": false,
         "straight": false,
         "out_mode": "out",
         "attract": {
-            "enable": false,
+            "enable": true,
             "rotateX": 600,
             "rotateY": 1200
         }

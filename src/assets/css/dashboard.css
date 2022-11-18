@@ -1,31 +1,6 @@
 .btn-dashboard{
+    background: #00344D;
+    height: 425px;
+    margin: 2px;
     width: 100%;
-    height: 410px;
-    font-size: 30px;
-    background: #00344d;
-    color: #fff;
-    margin: 5px;
 }
-#section-sedes{
-    height: 100vh;
-    width: 100%;
-    padding: 50px;
-    background: rgba(204, 204, 204, 0.315);
-    justify-content: center;
-    position: relative;
-}
-#normalistas{
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-/* #particles-js-dash{ 
-    position:fixed; 
-    width: 100%; 
-    height: 100%; 
-    background-color: #000;
-    background-image: url(""); 
-    background-repeat: no-repeat; 
-    background-size: cover; 
-    background-position: 50% 50%; 
-  }  */

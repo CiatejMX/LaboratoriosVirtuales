@@ -1,4 +1,4 @@
-import Logo from '../../assets/img/logo-ciatej.jpg'; 
+import Logo from '../../assets/img/logo-ciatej.png'; 
 import { Link } from 'react-router-dom';
 import '../../assets/css/registro.css';
 import '../../assets/css/particles.css';

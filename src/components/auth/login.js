@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../assets/img/logo-ciatej.jpg";
+import Logo from "../../assets/img/logo-ciatej.png";
 import { Link } from "react-router-dom";
 import '../../assets/css/login.css';
 import '../../assets/css/particles.css';
@@ -36,7 +36,7 @@ const Login = () => {
 							    </div>
                             </div>
                             <div className="mb-3">
-                                <Link type="submit" className="btn btn-primary btn-login" to='/dashboard'> Login </Link>
+                                <Link type="submit" className="btn btn-primary btn-login" to='/home'> Login </Link>
                             </div>
                             <div className="mb-3 text-center">
                                 <p>No tienes una cuenta?  <Link className="register" type="button" to='/registro'>Crear cuenta</Link></p>
