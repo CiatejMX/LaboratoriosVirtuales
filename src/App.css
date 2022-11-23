@@ -1,5 +1,5 @@
 body{
-  overflow-x: hidden;
+  overflow-x: auto;
   background: rgba(204, 204, 204, 0.486);
   margin: 0;
 }
@@ -7,6 +7,7 @@ body{
   margin-top: 60px;
   padding: 20px 30px;
   transition: all 0.3s;
+  margin-left: auto;
 }
 .video-info{
   width: 560px; 
@@ -27,7 +28,13 @@ body{
   -ms-transition: all ease-in-out 200ms;
   -o-transition: all ease-in-out 200ms;
 }
+.img-model3D{
+  width: 921px;
+}
 
+
+
+/*Responsive*/
 @media (max-width: 1199px) {
   #main {
     padding: 20px;
@@ -44,7 +51,7 @@ body{
   }
 }
 
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
 
   .toggle-sidebar #main {
     margin-left: 0;
@@ -53,4 +60,4 @@ body{
   .toggle-sidebar .sidebar {
     left: -300px;
   }
-}
+} */

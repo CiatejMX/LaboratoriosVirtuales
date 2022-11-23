@@ -1,22 +1,20 @@
 import { Link, useNavigate } from "react-router-dom";
+import React, { useState } from "react";
 import * as AiIcons from 'react-icons/ai';
 import * as FiIcons from 'react-icons/fi';
-import * as FaIcons from 'react-icons/fa';
 import * as GiIcons from 'react-icons/gi';
-import * as CiIcons from 'react-icons/ci';
 import * as MdIcons from 'react-icons/md';
-import * as RiIcons from 'react-icons/ri';
 import * as BsIcons from 'react-icons/bs';
+import * as SlIcons from 'react-icons/sl';
 import '../../assets/css/sidebarnav.css';
 import Logo from '../../assets/img/logo-ciatej.png';
 import LabVirt from '../../assets/img/Logo Red Laboratorios Virtuales.png';
 
 const Sidebarnav = () => {
 
-        function showSidebar (){
-            alert('Show & Hide Sidebar');
-        }
-
+        const [active, setActive] = useState(false)
+        const activeSide = () => { setActive(!active) }
+      
         return(
         <>
                    <div>
@@ -24,7 +22,7 @@ const Sidebarnav = () => {
                    <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
                         <div className="container-fluid">
                         <a style={{fontSize: '20px', textDecoration: 'none', color: '#000' }}><img src={Logo} style={{width: '90px', height: '40px'}} />
-                        &nbsp; <img src={LabVirt} style={{width: '150px', height: '50px', marginLeft:'1em'}} />  <GiIcons.GiHamburgerMenu className="menu-toggle" onClick={showSidebar}/></a>
+                        &nbsp; <img src={LabVirt} style={{width: '150px', height: '50px', marginLeft:'1em'}} />  <GiIcons.GiHamburgerMenu className="menu-toggle" onClick={activeSide}/></a>
                             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <AiIcons.AiOutlineArrowDown /> </button>
                             <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -41,7 +39,7 @@ const Sidebarnav = () => {
                         </div>
                     </nav>    
 
-                        <div className="sidebar">
+                        <div className={!active ? 'sidebar':'sidebar-sh'}>
                             <ul>
                                 {/* PRINCIPAL */}
                                 <li className='drop'><Link to="/dashboard" className='btn dropd'><AiIcons.AiOutlineHome />  &nbsp; PRINCIPAL</Link></li>
@@ -53,23 +51,23 @@ const Sidebarnav = () => {
                            
                                  <ul className='uldrop'>
                                     <li className='drop'>
-                                    <Link className='btn dropd'><GiIcons.GiAtom style={{color:'#fff', fontWeight: 'bold', fontSize: '18px'}}  /> &nbsp; Posgrado </Link> 
+                                    <Link className='btn dropd'><SlIcons.SlGraduation style={{color:'#fff', fontWeight: 'bold', fontSize: '18px'}}  /> &nbsp; Posgrado </Link> 
                                     </li>                
 
                                     <li className='drop'>
-                                    <Link className='btn dropd'><GiIcons.GiAtom style={{color:'#fff', fontWeight: 'bold', fontSize: '18px'}} /> &nbsp; Biotecnología Médica y Fa.</Link> 
+                                    <Link className='btn dropd'><MdIcons.MdOutlineScience style={{color:'#fff', fontWeight: 'bold', fontSize: '18px'}} /> &nbsp; Biotecnología Médica y Fa.</Link> 
                                     </li>
 
                                     <li className='drop'>
-                                    <Link className='btn dropd'><GiIcons.GiAtom style={{color:'#fff', fontWeight: 'bold', fontSize: '18px'}}  /> &nbsp; Tecnología Ambiental</Link> 
+                                    <Link className='btn dropd'><MdIcons.MdOutlineScience style={{color:'#fff', fontWeight: 'bold', fontSize: '18px'}}  /> &nbsp; Tecnología Ambiental</Link> 
                                     </li>
 
                                     <li className='drop'>
-                                    <Link className='btn dropd'><GiIcons.GiAtom style={{color:'#fff', fontWeight: 'bold', fontSize: '18px'}}  /> &nbsp; Tecnología Alimentaria</Link> 
+                                    <Link className='btn dropd'><MdIcons.MdOutlineScience style={{color:'#fff', fontWeight: 'bold', fontSize: '18px'}}  /> &nbsp; Tecnología Alimentaria</Link> 
                                     </li>
 
                                     <li className='drop'>
-                                    <Link className='btn dropd'><GiIcons.GiAtom style={{color:'#fff', fontWeight: 'bold', fontSize: '18px'}}  /> &nbsp; USAM</Link> 
+                                    <Link className='btn dropd'><MdIcons.MdOutlineScience style={{color:'#fff', fontWeight: 'bold', fontSize: '18px'}}  /> &nbsp; USAM</Link> 
                                     </li>
                                 
                                 </ul>
@@ -84,19 +82,19 @@ const Sidebarnav = () => {
                            
                                  <ul className='uldrop'>
                                 <li className='drop'>
-                                    <Link to="/zapopan/posgrado" className='btn dropd'><GiIcons.GiAtom style={{color:'#fff', fontWeight: 'bold', fontSize: '18px'}}  /> &nbsp; Posgrado </Link> 
+                                    <Link to="/zapopan/posgrado" className='btn dropd'><SlIcons.SlGraduation style={{color:'#fff', fontWeight: 'bold', fontSize: '18px'}}  /> &nbsp; Posgrado </Link> 
                                 </li>
 
                                 <li className='drop'>
-                                <Link className='btn dropd' to="/zapopan/biotecnología-industrial"><GiIcons.GiAtom style={{color:'#fff', fontWeight: 'bold', fontSize: '18px'}} /> &nbsp; Biotecnología Industrial</Link> 
+                                <Link className='btn dropd' to="/zapopan/biotecnología-industrial"><MdIcons.MdOutlineScience style={{color:'#fff', fontWeight: 'bold', fontSize: '18px'}} /> &nbsp; Biotecnología Industrial</Link> 
                                 </li>
 
                                 <li className='drop'>
-                                <Link className='btn dropd' to="/zapopan/tecnología-alimentaria"><GiIcons.GiAtom style={{color:'#fff', fontWeight: 'bold', fontSize: '18px'}}  /> &nbsp; Tecnología Alimentaria</Link> 
+                                <Link className='btn dropd' to="/zapopan/tecnología-alimentaria"><MdIcons.MdOutlineScience style={{color:'#fff', fontWeight: 'bold', fontSize: '18px'}}  /> &nbsp; Tecnología Alimentaria</Link> 
                                 </li>
                                 
                                 <li className='drop'>
-                                <Link className='btn dropd' to="/zapopan/biotecnología-vegetal"><GiIcons.GiAtom style={{color:'#fff', fontWeight: 'bold', fontSize: '18px'}}  /> &nbsp; Biotecnología Vegetal</Link> 
+                                <Link className='btn dropd' to="/zapopan/biotecnología-vegetal"><MdIcons.MdOutlineScience style={{color:'#fff', fontWeight: 'bold', fontSize: '18px'}}  /> &nbsp; Biotecnología Vegetal</Link> 
                                 </li>
 
                                  </ul>
@@ -111,15 +109,15 @@ const Sidebarnav = () => {
                                     <ul className='uldrop'>     
 
                                         <li className='drop'>
-                                          <Link className='btn dropd'><GiIcons.GiAtom style={{color:'#fff', fontWeight: 'bold', fontSize: '18px'}} /> &nbsp; Bioprocesos</Link> 
+                                          <Link className='btn dropd'><MdIcons.MdOutlineScience style={{color:'#fff', fontWeight: 'bold', fontSize: '18px'}} /> &nbsp; Bioprocesos</Link> 
                                         </li>
 
                                         <li className='drop'>
-                                          <Link className='btn dropd'><GiIcons.GiAtom style={{color:'#fff', fontWeight: 'bold', fontSize: '18px'}} /> &nbsp; Biotecnología Vegetal</Link> 
+                                          <Link className='btn dropd'><MdIcons.MdOutlineScience style={{color:'#fff', fontWeight: 'bold', fontSize: '18px'}} /> &nbsp; Biotecnología Vegetal</Link> 
                                         </li>
 
                                         <li className='drop'>
-                                          <Link className='btn dropd'><GiIcons.GiAtom style={{color:'#fff', fontWeight: 'bold', fontSize: '18px'}} /> &nbsp; Tecnología Alimentaria</Link> 
+                                          <Link className='btn dropd'><MdIcons.MdOutlineScience style={{color:'#fff', fontWeight: 'bold', fontSize: '18px'}} /> &nbsp; Tecnología Alimentaria</Link> 
                                         </li>
                                     </ul>
 
@@ -134,27 +132,27 @@ const Sidebarnav = () => {
                                     <ul className='uldrop'>   
 
                                         <li className='drop'>
-                                          <Link className='btn dropd'><GiIcons.GiAtom style={{color:'#fff', fontWeight: 'bold', fontSize: '18px'}} /> &nbsp; Posgrado</Link> 
+                                          <Link className='btn dropd'><SlIcons.SlGraduation style={{color:'#fff', fontWeight: 'bold', fontSize: '18px'}} /> &nbsp; Posgrado</Link> 
                                         </li>
                                                                  
                                         <li className='drop'>
-                                          <Link className='btn dropd'><GiIcons.GiAtom style={{color:'#fff', fontWeight: 'bold', fontSize: '18px'}} /> &nbsp; Biotecnología Médica y Fa.</Link> 
+                                          <Link className='btn dropd'><MdIcons.MdOutlineScience style={{color:'#fff', fontWeight: 'bold', fontSize: '18px'}} /> &nbsp; Biotecnología Médica y Fa.</Link> 
                                         </li>
 
                                         <li className='drop'>
-                                          <Link className='btn dropd'><GiIcons.GiAtom style={{color:'#fff', fontWeight: 'bold', fontSize: '18px'}} /> &nbsp; Tecnología Alimentaria</Link> 
+                                          <Link className='btn dropd'><MdIcons.MdOutlineScience style={{color:'#fff', fontWeight: 'bold', fontSize: '18px'}} /> &nbsp; Tecnología Alimentaria</Link> 
                                         </li>
                                         
                                         <li className='drop'>
-                                          <Link className='btn dropd'><GiIcons.GiAtom style={{color:'#fff', fontWeight: 'bold', fontSize: '18px'}} /> &nbsp; Biotecnología Vegetal</Link> 
+                                          <Link className='btn dropd'><MdIcons.MdOutlineScience style={{color:'#fff', fontWeight: 'bold', fontSize: '18px'}} /> &nbsp; Biotecnología Vegetal</Link> 
                                         </li>
 
                                         <li className='drop'>
-                                          <Link className='btn dropd'><GiIcons.GiAtom style={{color:'#fff', fontWeight: 'bold', fontSize: '18px'}} /> &nbsp; Tecnología Ambiental</Link> 
+                                          <Link className='btn dropd'><MdIcons.MdOutlineScience style={{color:'#fff', fontWeight: 'bold', fontSize: '18px'}} /> &nbsp; Tecnología Ambiental</Link> 
                                         </li>
 
                                         <li className='drop'>
-                                          <Link className='btn dropd'><GiIcons.GiAtom style={{color:'#fff', fontWeight: 'bold', fontSize: '18px'}} /> &nbsp; USAM</Link> 
+                                          <Link className='btn dropd'><MdIcons.MdOutlineScience style={{color:'#fff', fontWeight: 'bold', fontSize: '18px'}} /> &nbsp; USAM</Link> 
                                         </li>
 
                                     </ul>

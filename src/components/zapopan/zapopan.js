@@ -23,7 +23,7 @@ const Zapopan = () => {
 
                 <div className='row'>
                 <div className='col-lg-12'>
-                    <img style={{width:'921px'}} src={ZapopanImg} useMap="#image-map"/>
+                    <img className="img-model3D" src={ZapopanImg} useMap="#image-map"/>
                     <map name="image-map">
                     <Link to='/zapopan/biotecnología-industrial'><area shape="poly" coords="194, 151, 338, 188, 387, 275, 82, 421, -59, 213" title="Biotecnología Industrial" /></Link>
                     <Link to='/zapopan/tecnología-alimentaria'><area shape="poly" coords="244, 132, 443, 95, 631, 121, 544, 171, 412, 231"  title="Tecnología Alimentaria" /></Link>

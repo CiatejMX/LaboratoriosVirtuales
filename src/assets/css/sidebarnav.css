@@ -1,6 +1,52 @@
 /*--------------------------------------------------------------
-# Sidebar
+# Sidebar class hide
 --------------------------------------------------------------*/
+.sidebar-sh {
+  background: #29363d;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  padding: 5px;
+  z-index: 996;
+  transition: all 0.4s;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #aab7cf transparent;
+  box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+}
+.sidebar-sh > ul, li{
+  display: block;
+  padding: 10px;
+  list-style: none;
+  cursor: pointer;
+}
+.sidebar-sh .dropd{
+  text-decoration: none;
+  color: #fff;
+  width: 100%;
+  height: 30px;
+  text-align: left;
+  padding: 3px 10px;
+  border: none;
+  border-radius: 0px;
+  font-size: 15px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+}
+.sidebar-sh .uldrop{
+  padding: 12px 10px;
+}
+
+
+/* Sidebar class show */
 .sidebar {
   background: #29363d;
   position: fixed;
@@ -10,15 +56,15 @@
   width: 300px;
   padding: 5px;
   z-index: 996;
-  transition: all 0.3s;
+  transition: all 0.4s;
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: #aab7cf transparent;
   box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  -o-transition: all 0.3s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
 }
 .sidebar > ul, li{
   display: block;
@@ -71,10 +117,12 @@
   font-size: 30px;
   margin-left: 15px;
   cursor: pointer;
+  visibility: hidden;
 }
 .sedes-nav{
   text-decoration: none;
   color: #000; 
+  margin: 5px;
 }
 .sedes-nav:hover{
   background: #29363d;
@@ -92,6 +140,55 @@
   .sidebar {
     left: -300px;
   }
+  .sidebar-sh {
+    background: #29363d;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    padding: 5px;
+    z-index: 996;
+    transition: all 0.3s;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #aab7cf transparent;
+    box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+  }
+  .sidebar-sh > ul, li{
+    display: block;
+    padding: 10px;
+    list-style: none;
+    cursor: pointer;
+  }
+  .sidebar-sh .dropd{
+    text-decoration: none;
+    color: #fff;
+    width: 100%;
+    height: 30px;
+    text-align: left;
+    padding: 3px 10px;
+    border: none;
+    border-radius: 0px;
+    font-size: 15px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+  }
+  .sidebar-sh .uldrop{
+    padding: 12px 10px;
+  }
+  .menu-toggle{
+    font-size: 30px;
+    margin-left: 15px;
+    cursor: pointer;
+    visibility: visible;
+  }  
 }
 
 .sidebar::-webkit-scrollbar {
@@ -104,10 +201,10 @@
   background-color: #aab7cf;
 }
 
-@media (max-width: 1199px) {
+/* @media (max-width: 1199px) {
   .toggle-sidebar .sidebar {
     left: 0;
   }
-}
+} */
 
 

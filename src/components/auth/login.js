@@ -36,11 +36,11 @@ const Login = () => {
 							    </div>
                             </div>
                             <div className="mb-3">
-                                <Link type="submit" className="btn btn-primary btn-login" to='/home'> Login </Link>
+                                <Link type="submit" className="btn btn-primary btn-login" to='/dashboard'> Login </Link>
                             </div>
-                            <div className="mb-3 text-center">
+                            {/* <div className="mb-3 text-center">
                                 <p>No tienes una cuenta?  <Link className="register" type="button" to='/registro'>Crear cuenta</Link></p>
-                            </div>
+                            </div> */}
                             <div className="mb-3 text-center">
                             &copy; <a href="https://ciatej.mx/" target="_blank" className="register">CIATEJ</a>
                             </div>

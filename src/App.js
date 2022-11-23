@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 //Imports generales
 import Login from './components/auth/login';
-import Registro from './components/auth/registro'; 
 import Sidebarnav from "./components/pages/sidebarnav";
 import Home from './components/pages/home'; 
 import Users from './components/pages/users';
@@ -39,7 +38,6 @@ function App() {
 
           /** Rutas Generales */
           <Route path='/' element={<Login />} />
-          <Route path='/registro' element={<Registro />} />
           <Route path='/dashboard' element={<Home />} />
           <Route path='/usuarios' element={<Users />} />
 
