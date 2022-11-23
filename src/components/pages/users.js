@@ -3,25 +3,25 @@ import '../../assets/css/registro.css';
 import { FaLock } from "react-icons/fa";
 import { GrMail } from "react-icons/gr";
 import { FaUserAlt } from "react-icons/fa";
-import * as MdIcons from 'react-icons/md';
+import * as BsIcons from 'react-icons/bs';
 
 const Users = () => {
 
-    const rol0 = () => { var r0 = 0;  document.getElementById('rol').value = r0; }
-    const rol1 = () => { var r1 = 1;  document.getElementById('rol').value = r1; }
-    const rol2 = () => { var r2 = 2;  document.getElementById('rol').value = r2; }
+    const rol0 = () => { document.getElementById('rol').value = 0; }
+    const rol1 = () => { document.getElementById('rol').value = 1; }
+    const rol2 = () => { document.getElementById('rol').value = 2; }
 
     return(
     <>
         <main id="main" className="main">
             <div className='row'>
-                    <div className='col-lg-3'>
+                    <div className='col-lg-2'>
                         <button className='btn btn-inside-page' type='button' data-bs-toggle="modal" data-bs-target="#exampleModal"><FaUserAlt /> Nuevo Usuario</button>
                     </div>
             </div><br/>
 
-            <table id="users-table" class="table table-striped table-sm">
-                <thead>
+            <table className="table table-bordered table-striped table-hover">
+                <thead className='table-dark'>
                     <tr>
                         <th>Nombre</th>
                         <th>Correo</th>
@@ -39,10 +39,10 @@ const Users = () => {
                         <td>Activo</td>
                         <td>Administrador</td>
                         <td style={{width:'150px'}}>
-                           <button className="btn btn-sm btn-warning">Editar</button>&nbsp;
-                           <button className="btn btn-sm btn-danger">Eliminar</button>
+                           <button className="btn btn-sm btn-warning"><BsIcons.BsFillPencilFill/></button>&nbsp;
+                           <button className="btn btn-sm btn-danger"><BsIcons.BsFillTrashFill/></button>
                         </td>
-                    </tr>
+                    </tr> 
                 </tbody>
             </table>
             
